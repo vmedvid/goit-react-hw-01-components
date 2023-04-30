@@ -1,10 +1,17 @@
 import PropTypes from 'prop-types';
-import { StatisticsWrap, Title, StatList, StatItem, Label, Percentage } from "./Statistics.styled";
+import {
+  StatisticsWrap,
+  Title,
+  StatList,
+  StatItem,
+  Label,
+  Percentage,
+} from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <StatisticsWrap>
-          <Title>{title}</Title>
+      <Title>{title ? title : 'No title'}</Title>
       <StatList length={stats.length}>
         {stats.map(stat => (
           <StatItem key={stat.id} backgroundColor={getRandomHexColor()}>
