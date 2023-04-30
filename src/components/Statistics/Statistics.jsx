@@ -11,7 +11,7 @@ import {
 export const Statistics = ({ title, stats }) => {
   return (
     <StatisticsWrap>
-      <Title>{title ? title : 'No title'}</Title>
+      {title && <Title>{title}</Title>}
       <StatList length={stats.length}>
         {stats.map(stat => (
           <StatItem key={stat.id} backgroundColor={getRandomHexColor()}>
